@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Major Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+  <div class="login">
+	  <h1>Early Classification of Diabetes</h1>
+    <br>
+    <article>
+
+
+    </article>
+    <!-- Main Input For Receiving Query to our ML -->
+    <form class='cls' action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="age"                 placeholder="age"        required="required" />
+      <input type="text" name="gender"              placeholder="gender (0-male 1 female)"     required="required" />
+		  <input type="text" name="polyuria"            placeholder="polyuria"   required="required" />
+      <input type="text" name="polydipsia"          placeholder="polydipsia" required="required" />
+      <input type="text" name="sudden_weight_loss"  placeholder="sudden_weight_loss" required="required" />
+      <input type="text" name="weakness"            placeholder="weakness"   required="required" />
+      <input type="text" name="polyphagia"          placeholder="polyphagia" required="required" />
+      <input type="text" name="genital_thrush"      placeholder="genital_thrush"     required="required" />
+      <input type="text" name="visual_blurring"     placeholder="visual_blurring"    required="required" />
+      <input type="text" name="itching"             placeholder="itching"    required="required" />
+      <input type="text" name="irritability"        placeholder="irritability"       required="required" />
+      <input type="text" name="delayed_healing"     placeholder="delayed_healing"    required="required" />
+      <input type="text" name="partial_paresis"     placeholder="partial_paresis"    required="required" />
+      <input type="text" name="muscle_stiffness"    placeholder="muscle_stiffness"   required="required" />
+      <input type="text" name="alopecia"            placeholder="alopecia"   required="required" />
+      <input type="text" name="obesity"             placeholder="obesity"    required="required" />
+
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+    <br>
+
+  </div>
+  <!-- <div>
+    <form action = "/getdelay" method="POST">
+      <p> Select Origin:<input name="origin" type ="text" value="JFK" /> </p>
+      <p> Select Destination: <input name="dest" type ="text" value="LAX" /> </p>
+      <p> Select Airline :   
+      <select name="unique_carrier">
+        <option value="AA">American Airlines </option>
+        <option value="DL">Delta Air Lines </option>
+        <option value="B6">JetBlue Airways</option>
+        <option value="WN">Southwest Airlines </option>
+        <option value="UA" selected>United Air Lines </option>
+      </select>
+      <p> Select Day of Week:<input name="day_of_week" type ="text" value="1" /> </p>
+      <p> Select Departure Hour: <input name="dep_hour" type ="text" value="10" /> </p>
+      <p> <input type ="submit" value="submit" /> </p>
+    </form>
+  </div> -->
+
+</body>
+</html>
