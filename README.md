@@ -4,9 +4,9 @@ Link to deployed website : https://diabetes-classification-tome.onrender.com
 
 Dataset Link  :   https://www.kaggle.com/datasets/andrewmvd/early-diabetes-classification
 
-colab python machine learning code : https://colab.research.google.com/drive/1Nv5MzBniPvS_HnMrTQaXzZLgxlnia8cW#scrollTo=wrcw9tsStDz8&uniqifier=1 
+colab python machine learning code : https://colab.research.google.com/drive/1Nv5MzBniPvS_HnMrTQaXzZLgxlnia8cW?usp=sharing
 
-github : Here are details of ea
+github : Here are complete detail - ( https://github.com/mohitsharma-iitj/Early-Classification-of-Diabetes )
 
          1.  From colab pickle, trained min max scaler (to transform the input data for applying in model.pkl) -> transform_data_of_array.pkl
          
