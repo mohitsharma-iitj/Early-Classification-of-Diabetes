@@ -1,6 +1,6 @@
 # Major-Project
 
-Link to deployed website :   ..... to be updated
+Link to deployed website : https://diabetes-classification-tome.onrender.com
 
 Dataset Link  :   https://www.kaggle.com/datasets/andrewmvd/early-diabetes-classification
 
@@ -21,5 +21,5 @@ github : Here are details of ea
          6.  procfile ->
           
           
-report : ..link..
+report : https://docs.google.com/document/d/1MOugw_i4p9uA70Ab7PDjjss8ntu_w0VGJz90R1rqJdo/edit?usp=sharing
         
