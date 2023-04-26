@@ -24,11 +24,11 @@ def predict():
         else:     
                 codn = False
                 
-        for i in range(1,16):
-            if((k[i]==0) or (k[i]==1)):     
-                    codn = codn and True   
-            else:     
-                    codn = codn and False
+        # for i in range(1,16):
+        #     if((k[i]==0) or (k[i]==1)):     
+        #             codn = codn and True   
+        #     else:     
+        #             codn = codn and False
 
         if(codn):
             model = pickle.load(open('model.pkl', 'rb'))
@@ -36,10 +36,12 @@ def predict():
             int_features = transform_data_of_array.transform([k])
             prediction = model.predict( int_features)
             # output = round(prediction[0], 2)
-
-            return render_template('index.html', prediction_text='predicted output is $ {}'.format(prediction))
+            if(int(prediction)==1):
+                return render_template('index.html', prediction_text='You have sugar')
+            else:
+                return render_template('index.html', prediction_text="You don't have sugar")
         else:
-            return render_template('index.html', prediction_text='Please give correct input, all either 0 or 1 (except age b/w 16:90) $ {} '.format(k))
+            return render_template('index.html', prediction_text='Please give correct input, all either 0 or 1 (except age b/w 16:90) {} '.format(k))
         
     # except:
         # return render_template('index.html', prediction_text='Please give correct input, all either 0 or 1 (except age b/w 5:100) $ {} '.format(codn))
