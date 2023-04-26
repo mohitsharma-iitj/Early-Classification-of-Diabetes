@@ -15,7 +15,7 @@ html { width: 100%; height:100%;  }
 
 body { 
 	/* overflow-y: hidden; */
-	overflow-x: hidden; 
+	/* overflow-x: hidden;  */
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
@@ -34,30 +34,42 @@ body {
 }
 .login { 
 	position: relative;
-	top: 20%;
-	left: 50%;
-	margin: -150px 0 0 -150px;
-	width:400px;
-	height:400px;
+	display: inline-block;
+	/* border: 3px solid rgb(128, 0, 100); */
+	width:50%;
+	height:95%;
 }
 
-.login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
-
+.login h1 {
+	color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; 
+	/* margin-top: -1.5%; */
+}
 .cls{
 	display: grid;
-    grid-template-columns:8.5rem 8.5rem;
-
-	column-gap:15%;
+	grid-template-columns: 47.5% 47.5%;
+	column-gap:5%;
+	align-self: center;
+	margin-top: 1%;
+	/* border: 3px solid rgb(181, 126, 17); */
+}
+.xyz{
+	width: 90%;
+	height:70%;
+}
+input{
+	height:60%;
 }
 
-input,select { 
-	width: 100%; 
-	margin-bottom: 10px; 
-	/* margin-left: 10px; */
+.my,fieldset { 
+	width: 95%; 
+	height:90%;
+	margin-bottom: 4.4%; 
+	/* border: 3px solid rgb(128, 49, 0); */
+
 	background: rgba(0,0,0,0.3);
-	border: none;
+	/* border: 2%; */
 	outline: none;
-	padding: 10%;
+	padding: 0.5%;
 	font-size: 13px;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
@@ -70,9 +82,10 @@ input,select {
 	-ms-transition: box-shadow .5s ease;
 	transition: box-shadow .5s ease;
 }
-input:focus,select:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+.my:focus,fieldset:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
 button{
+	margin-top: 10%;
 	text-align: right;
 	position: relative;
 	left: 60%;
