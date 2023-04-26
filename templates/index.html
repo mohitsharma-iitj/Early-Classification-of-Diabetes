@@ -15,124 +15,138 @@
 <body>
   <div class="login">
 	  <h1>Early Classification of Diabetes</h1>
-    <br>
-    <article>
+    <!-- <br> -->
 
-
-    </article>
     <!-- Main Input For Receiving Query to our ML -->
     <form class='cls' action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="age"                 placeholder="age"        required="required" />
-
+      <fieldset>
+        <legend>age:</legend>
+        <input class='xyz' type="text" name="age"  required="required" />
+      </fieldset>
       <!-- <input type="text" name="gender"              placeholder="gender (0-male 1 female)"     required="required" /> -->
-      <select name="gender" required="required">
-        <option value="">-- gender --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>  
+      <fieldset>
+        <legend>gender:</legend>
+        <input type="radio" name="gender"  value="1" required="required" /> <label for="Yes">Female</label>
+        <input type="radio" name="gender" value="0" />                      <label for="No">Male</label><br>
+        
+      </fieldset>  
 
 		  <!-- <input type="text" name="polyuria"            placeholder="polyuria"   required="required" /> -->
-      <select name="polyuria" required>
-        <option value="">-- polyuria --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>polyuria:</legend>
+        <input type="radio" name="polyuria"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="polyuria" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset> 
 
       <!-- <input type="text" name="polydipsia"          placeholder="polydipsia" required="required" /> -->
-      <select name="polydipsia" required>
-        <option value="">-- polydipsia --</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>polydipsia:</legend>
+        <input type="radio" name="polydipsia"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="polydipsia" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>  
 
       <!-- <input type="text" name="sudden_weight_loss"  placeholder="sudden_weight_loss" required="required" /> -->
-      <select name="sudden_weight_loss" required>
-        <option value="">--sudden_weight_loss --</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>sudden_weight_loss:</legend>
+        <input type="radio" name="sudden_weight_loss"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="sudden_weight_loss" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="weakness"            placeholder="weakness"   required="required" /> -->
-      <select name="weakness" required>
-        <option value="">--weakness --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>weakness:</legend>
+        <input type="radio" name="weakness"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="weakness" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="polyphagia"          placeholder="polyphagia" required="required" /> -->
-      <select name="polyphagia" required>
-        <option value="">--polyphagia --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>polyphagia:</legend>
+        <input type="radio" name="polyphagia"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="polyphagia" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="genital_thrush"      placeholder="genital_thrush"     required="required" /> -->
-      <select name="genital_thrush" required>
-        <option value="">--genital_thrush --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>genital_thrush:</legend>
+        <input type="radio" name="genital_thrush"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="genital_thrush" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="visual_blurring"     placeholder="visual_blurring"    required="required" /> -->
-      <select name="visual_blurring" required>
-        <option value="">--visual_blurring --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>visual_blurring:</legend>
+        <input type="radio" name="visual_blurring"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="visual_blurring" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="itching"             placeholder="itching"    required="required" /> -->
-      <select name="itching" required>
-        <option value="">--itching --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>itching:</legend>
+        <input type="radio" name="itching"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="itching" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="irritability"        placeholder="irritability"       required="required" /> -->
-      <select name="irritability" required>
-        <option value="">--irritability --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>irritability:</legend>
+        <input type="radio" name="irritability"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="irritability" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="delayed_healing"     placeholder="delayed_healing"    required="required" /> -->
-      <select name="delayed_healing" required>
-        <option value="">--delayed_healing --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>delayed_healing:</legend>
+        <input type="radio" name="delayed_healing"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="delayed_healing" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="partial_paresis"     placeholder="partial_paresis"    required="required" /> -->
-      <select name="partial_paresis" required>
-        <option value="">--partial_paresis --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>partial_paresis:</legend>
+        <input type="radio" name="partial_paresis"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="partial_paresis" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="muscle_stiffness"    placeholder="muscle_stiffness"   required="required" /> -->
-      <select name="muscle_stiffness" required>
-        <option value="">-- muscle_stiffness --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>muscle_stiffness:</legend>
+        <input type="radio" name="muscle_stiffness"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="muscle_stiffness" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="alopecia"            placeholder="alopecia"   required="required" /> -->
-      <select name="alopecia" required>
-        <option value="">--alopecia --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>alopecia:</legend>
+        <input type="radio" name="alopecia"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="alopecia" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <!-- <input type="text" name="obesity"             placeholder="obesity"    required="required" /> -->
-      <select name="obesity" required>
-        <option value="">--obesity --</option>
-        <option value="0" >0</option>
-        <option value="1">1</option>
-      </select>
+      <fieldset>
+        <legend>obesity:</legend>
+        <input type="radio" name="obesity"  value="1" required="required" /> <label for="Yes">Yes</label>
+        <input type="radio" name="obesity" value="0" />                      <label for="No"> No</label><br>
+        
+      </fieldset>
 
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
-    <br>
+    
     <br>
     {{ prediction_text }}
     <br>
