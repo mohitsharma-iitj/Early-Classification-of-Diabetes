@@ -1,4 +1,4 @@
-# Major-Project    ........   early-diabetes-classification
+# Early classification of Diabetes 
 
 Link to deployed website : https://diabetes-classification-tome.onrender.com
 
